@@ -11,7 +11,7 @@ end
 return {
   -- comments
   {
-    "echasnovski/mini.comment",
+    "nvim-mini/mini.comment",
     enabled = true,
     opts = {
       mappings = {
@@ -27,6 +27,17 @@ return {
     cmd = "IncRename",
     lazy = false,
     config = true,
+  },
+
+  -- session
+  {
+    "folke/persistence.nvim",
+    keys = {
+      { "<leader>qs", false },
+      { "<leader>qS", false },
+      { "<leader>ql", false },
+      { "<leader>qd", false },
+    },
   },
 
   -- auto completion

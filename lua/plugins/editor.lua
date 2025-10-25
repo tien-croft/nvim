@@ -7,7 +7,7 @@ return {
 
   -- buffer remove
   {
-    "echasnovski/mini.bufremove",
+    "nvim-mini/mini.bufremove",
 
     keys = {
       {

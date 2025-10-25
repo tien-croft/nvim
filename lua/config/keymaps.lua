@@ -56,7 +56,9 @@ map("n", "n", "nzzzv", opts)
 map("n", "N", "Nzzzv", opts)
 
 -- Rename
-map("n", "<leader>rn", ":IncRename ", opts)
+map("n", "<leader>rn", function()
+  return ":IncRename " .. vim.fn.expand("<cword>")
+end, { expr = true })
 
 -- LazyVim
 map("n", "<leader>lv", "<cmd>Lazy<cr>", { desc = "Lazy" })
