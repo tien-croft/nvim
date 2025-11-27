@@ -14,6 +14,7 @@ if not configs.pico8_ls then
 end
 
 return {
+  { "Bakudankun/PICO-8.vim" },
   {
     "neovim/nvim-lspconfig",
     opts = {
