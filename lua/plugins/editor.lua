@@ -2,7 +2,24 @@ return {
   -- disable neo-tree
   {
     "nvim-neo-tree/neo-tree.nvim",
-    enabled = false,
+    keys = {
+      {
+        "<leader>T",
+        function()
+          require("neo-tree.command").execute({ toggle = true, dir = LazyVim.root() })
+        end,
+        desc = "Explorer NeoTree (Root Dir)",
+      },
+      {
+        "<leader>t",
+        function()
+          require("neo-tree.command").execute({ toggle = true, dir = vim.uv.cwd() })
+        end,
+        desc = "Explorer NeoTree (cwd)",
+      },
+      { "<leader>fe", false },
+      { "<leader>fE", false },
+    },
   },
 
   -- buffer remove
