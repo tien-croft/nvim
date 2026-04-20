@@ -64,3 +64,11 @@ if vim.fn.executable("lazygit") == 1 then
     Snacks.lazygit()
   end, { desc = "Lazygit (Root Dir)" })
 end
+
+-- Terminal
+map("n", "<leader>i", function()
+  Snacks.terminal(nil, { cwd = LazyVim.root() })
+end, { desc = "Terminal (Root Dir)" })
+map("n", "<leader>I", function()
+  Snacks.terminal()
+end, { desc = "Terminal (cwd)" })

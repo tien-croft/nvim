@@ -51,7 +51,14 @@ return {
     opts = {
       keymap = {
         preset = "enter",
-        ["<Tab>"] = { "snippet_forward", "select_next", "fallback" },
+        ["<Tab>"] = {
+          "snippet_forward",
+          function() -- sidekick next edit suggestion
+            return require("sidekick").nes_jump_or_apply()
+          end,
+          "select_next",
+          "fallback",
+        },
         ["<S-Tab>"] = { "snippet_backward", "select_prev", "fallback" },
       },
       signature = { window = { border = "single" } },
@@ -60,7 +67,6 @@ return {
         documentation = { window = { border = "single" } },
         list = {
           selection = {
-            preselect = true,
             auto_insert = true,
           },
         },
