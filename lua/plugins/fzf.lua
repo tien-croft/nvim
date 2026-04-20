@@ -6,12 +6,6 @@ return {
       local config = fzf.config
       local actions = fzf.actions
 
-      -- Quick fix
-      config.defaults.keymap.fzf["ctrl-f"] = "preview-page-down"
-      config.defaults.keymap.fzf["ctrl-b"] = "preview-page-up"
-      config.defaults.keymap.builtin["<c-f>"] = "preview-page-down"
-      config.defaults.keymap.builtin["<c-b>"] = "preview-page-up"
-
       return {
         "default-title",
         fzf_colors = true,
@@ -66,7 +60,7 @@ return {
 
         { "<leader>sg", LazyVim.pick("git_files"), desc = "Find Files (git-files)" },
 
-        { "<leader>su", LazyVim.pick("undotree"), desc = "Find Files (git-files)" },
+        { "<leader>su", LazyVim.pick("undotree"), desc = "Undotree" },
       }
     end,
   },
